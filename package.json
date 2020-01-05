@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/max-wilkinson/copyrighter.git"
+    "url": "https://github.com/zishe/copyrighter.git"
   },
   "publisher": "FordLabs",
   "preview": true,
@@ -46,7 +46,7 @@
       }
     ],
     "configuration": {
-      "title": "Copyrighter",
+      "title": "Copyrighter Supercharged",
       "properties": {
         "copyrighter.author": {
           "type": "string",
@@ -68,6 +68,11 @@
             "MIT",
             "GPL3"
           ]
+        },
+        "copyrighter.autoAdd": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically adds copyright at the opened file"
         }
       }
     }

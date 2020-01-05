@@ -28,6 +28,7 @@ This extension contributes the following settings:
 
 - `copyrighter.author`: Set the author that holds the copyright
 - `copyrighter.license`: Select a license header to include with your copyright. If no license is selected, then only the copyright will be added to files.
+- `copyrighter.autoAdd`: Select `true` if you want to include copyright info to opened file.
 
 ## Release Notes
 

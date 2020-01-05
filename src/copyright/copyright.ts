@@ -22,16 +22,22 @@ import * as configuration from '../configuration';
 export class Copyright {
   protected author: string;
   protected year: string;
+  protected date: string;
+  protected time: string;
 
   constructor() {
     this.author = configuration.getAuthor();
     this.year = new Date().getFullYear().toString();
-  }
+    this.date = new Date().toLocaleDateString();
+    this.time = new Date().toTimeString();
+}
 
   public header(): string {
     let template = `/*
- *   Copyright (c) ${this.year} ${this.author}
- *   All rights reserved.
+ * Copyright (c)
+ * @author ${this.author}
+ * Date: ${this.date}
+ * Time: ${this.time}
  */
 \n`;
     return template;

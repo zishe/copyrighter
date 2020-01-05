@@ -40,6 +40,10 @@ export function getAuthor(): string {
   return getConfiguration().get('author') || '';
 }
 
+export function getAutoAdd(): boolean {
+  return getConfiguration().get('autoAdd') || false;
+}
+
 export function getCopyright(): Copyright {
   const selectedLicense = getConfiguration().get('license');
 

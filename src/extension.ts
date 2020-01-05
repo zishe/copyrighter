@@ -17,6 +17,7 @@
 
 import * as vscode from 'vscode';
 import * as copyrightService from './copyright/copyrightService';
+import * as configuration from './configuration';
 
 // this method is called when your extension is activated
 export function activate(context: vscode.ExtensionContext) {
@@ -35,7 +36,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Create listener for automatically handling copyright checks
   vscode.window.onDidChangeActiveTextEditor(
     (editor: vscode.TextEditor | undefined) => {
-      copyrightService.handleCopyrightCheck(editor);
+      configuration.getAutoAdd() && copyrightService.handleCopyrightCheck(editor);
     }
   );
 
